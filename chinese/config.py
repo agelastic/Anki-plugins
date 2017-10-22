@@ -30,7 +30,7 @@ startup_tips = [
 (None, None),
 (None, None),
 (None, None),
-('Thank you for using the <b>Chinese Support Add-on</b>. Did you know? This is a volunteer project to help you improve your Chinese. Hundreds of hours went into it!<br/>If you like it, please take a moment to rate it in <a href="https://ankiweb.net/shared/info/3448800906">Ankiweb</a>. <br/>If you have questions or comments, don\'t hesitate to post them on the <a href="https://groups.google.com/forum/#!msg/anki-addons/YZmzNpmEuaY/OKbqbfGaMA0J">support forum</a>', None)
+('Thank you for using the <b>Chinese Support Add-on</b>. Did you know? This is a volunteer project to help you improve your Chinese. Hundreds of hours went into it!<br/>If you like it, please take a moment to rate it in <a href="https://ankiweb.net/shared/info/3448800906">Ankiweb</a>. <br/>If you have questions or comments, don\'t hesitate to post them on the <a href="https://anki.tenderapp.com/discussions/add-ons/1646-chinese-support-add-on">support forum</a>', None)
 ]
 
 
@@ -50,10 +50,7 @@ class config:
     def load(self):
         if not os.path.exists(self.filepath):
             self.create_new()
-        try:
-            self.options = json.load(open(self.filepath, 'r')) 
-        except:
-            self.create_new()
+        self.options = json.load(open(self.filepath, 'r')) 
 
     def save(self):
         json.dump(self.options, open(self.filepath, 'w'))

@@ -26,7 +26,6 @@ cedicts =  [
         "name":"CC-CEDICT",
         "source":"http://www.mdbg.net/chindict/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip",
         "zip":"tmp/cedict_1_0_ts_utf-8_mdbg.zip",
-        "unzip":True,
         "datafile":"cedict_ts.u8",
         "fields": ' [traditional, simplified, pinyin, pinyin_taiwan, classifiers, alternates, translation, None, None, None ]'
         },
@@ -35,7 +34,6 @@ cedicts =  [
         "name":"HanDeDICT",
         "source":"http://www.handedict.de/handedict/handedict-20110528.zip",
         "zip":"tmp/handedict-20110528.zip",
-        "unzip":True,
         "datafile":"handedict-20110528/handedict.u8",
         "fields": ' [traditional, simplified, pinyin, pinyin_taiwan, classifiers, alternates, None, translation, None, None ]'
         },
@@ -43,20 +41,9 @@ cedicts =  [
         "name":"CFDICT_old",
         "source":"http://www.chine-informations.com/chinois/open/CFDICT/cfdict_old.zip",
         "zip":"tmp/cfdict_old.zip",
-        "unzip":True,
         "datafile":"cfdict.u8",
         "fields":' [traditional, simplified, pinyin, pinyin_taiwan, classifiers, alternates, None, None, translation, None ]'
-        }#,
-#### Support not implemented yet
-#    {
-#        "name":"Cantonese CEDICT",
-#        "source":"http://dl.dropbox.com/u/32882273/yedict_20100108.u8",
-#        "unzip":False,
-#        "zip":"yedict.u8",
-#        "datafile":"yedict.u8",
-#        "fields":' [traditional, simplified, cantonese, mandarin, english]'
-#        } 
-#### Unavailable
+        } 
 #    {
 #        "name":"CC-ChEDICC",
 #        "source":"somewhere on http://cc-chedicc.wikispaces.com/",
@@ -65,7 +52,6 @@ cedicts =  [
 #        "fields": ' [traditional, simplified, pinyin, pinyin_taiwan, classifiers, alternates, None, None, None, translation ]'
 #        }
     ]
-
 
 
 
@@ -82,9 +68,8 @@ def downloadCedict():
         fd = open(cedict["zip"], 'wb')
         fd.write( urllib2.urlopen(cedict["source"]).read())
         fd.close()
-        if cedict["unzip"]:
-            z = zipfile.ZipFile(cedict["zip"], 'r')
-            z.extract(cedict["datafile"], "tmp")
+        z = zipfile.ZipFile(cedict["zip"], 'r')
+        z.extract(cedict["datafile"], "tmp")
 
 def importCedict(cedict, call):
     """Opens the cedict*.zip file containing the dictionary data.

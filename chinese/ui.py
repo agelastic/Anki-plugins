@@ -233,7 +233,7 @@ def myRebuildAddonsMenu(self):
         ui_actions["speech_"+i]=add_action(i, sm, set_option_constructor("speech", i), True)
     sm=m.addMenu(_("Fill incomplete notes"))
     add_action(_("Fill missing sounds"), sm, fill_sounds_logic)
-    add_action(_("Fill transcription"), sm, fill_pinyin_logic)
+    add_action(_("Fill pinyin and color"), sm, fill_pinyin_logic)
     add_action(_("Fill translation"), sm, fill_translation_logic)
     add_action(_("Fill simplified/traditional"), sm, fill_simp_trad_logic)
     add_action(_("Fill silhouette"), sm, fill_silhouette_logic)

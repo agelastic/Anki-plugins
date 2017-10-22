@@ -15,7 +15,7 @@ def setupToggleButton(editor):
     global toggleButton
     global editor_instance
     editor_instance = editor
-    toggleButton = editor_instance._addButton("mybutton", toggleButtonClick, size=False, text=u"汉字", tip="Enable/disable <b>Chinese Support Add-on</b> input fill-up") #check=True
+    toggleButton = editor_instance._addButton("mybutton", toggleButtonClick, size=False, text=u"汉子", tip="Enable/disable <b>Chinese Support Add-on</b> input fill-up") #check=True
 
 def toggleButtonClick():
     global enable
@@ -46,10 +46,10 @@ def updateToggleButton(editor):
 
     if enable:
 #        toggleButton.setChecked(True)
-        toggleButton.setText(u"✓ 汉字")
+        toggleButton.setText(u"✓ 汉子")
     else:
 #        toggleButton.setChecked(False)
-        toggleButton.setText(u"✕ 汉字")
+        toggleButton.setText(u"✕ 汉子")
    
 
     

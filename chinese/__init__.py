@@ -11,8 +11,8 @@
 #release info from github, in config.py
 __version__ = """0.10.10"""
 ankiweb_number = "3448800906"
-release_info = """This version fixes the Google TTS sound generation.
-"""
+release_info = """This version fixes Google TTS sound generation.<br>
+Thanks to Glutaminate for providing the fix."""
 
 prev = """<ul>
 <li>Improved Taiwan Pinyin and Bopomofo transcription.</li>
