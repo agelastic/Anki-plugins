@@ -1,2 +1,3 @@
 *.pyo
 *.backup
+.DS_Store
