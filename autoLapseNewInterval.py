@@ -17,7 +17,7 @@ from PyQt4 import QtGui
 #    unless we have at least this many cards 
 #    to go off of. This prevents us from changing initial 
 #    settings based on a small set of data.
-card_sample_size = 500
+card_sample_size = 100
 defaultTSR = 90 #Default target success rate (as a percentage)
 
 
