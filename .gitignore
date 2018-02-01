@@ -2,3 +2,4 @@
 *.backup
 .DS_Store
 autoLapseNewInterval.data
+ignore_dupes.log
