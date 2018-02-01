@@ -1,3 +1,4 @@
 *.pyo
 *.backup
 .DS_Store
+autoLapseNewInterval.data
